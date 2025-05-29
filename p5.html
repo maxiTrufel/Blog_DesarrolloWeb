@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Futuro de la Inteligencia Artificial en 2024 - TechBlog</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="icon" href="./img/virtual.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <nav class="navegacion">
+        <div class="contenedor-nav">
+          <a href="index.html" class="logo-nav">BldogTec</a>
+          <ul class="menu-nav" id="menuNav">
+            <li><a href="index.html" class="enlace-nav activo">Inicio</a></li>
+            <li>
+              <a href="index.html#suscribirse" class="enlace-nav"
+                >Suscribirse</a
+              >
+            </li>
+            <li><a href="#" class="enlace-nav">Volver a Linktree</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="principal">
+      <article class="detalle-blog">
+        <div class="contenedor">
+          <div class="migas">
+            <a href="index.html">Inicio</a> /
+            <span>CI/CD con GitHub Actions</span>
+          </div>
+
+          <header class="cabecera-blog">
+            <span class="categoria-blog">DevOps</span>
+            <h1 class="titulo-blog">
+              CI/CD con GitHub Actions: Automatizá tu Flujo de Trabajo
+            </h1>
+          </header>
+
+          <div class="contenedor-imagen-blog">
+            <img
+              src="./img/img5.png"
+              alt="GitHub Actions"
+              class="imagen-destacada-blog"
+            />
+          </div>
+
+          <div class="contenido-blog">
+            <p class="introduccion">
+              En un entorno de desarrollo moderno, la automatización es clave.
+              GitHub Actions te permite implementar CI/CD (Integración y
+              Despliegue Continuos) directamente desde tus repositorios,
+              simplificando tareas como testeo, builds y despliegues
+              automáticos. En esta guía te mostramos cómo empezar.
+            </p>
+
+            <h2>¿Qué es GitHub Actions?</h2>
+            <p>
+              GitHub Actions es una funcionalidad integrada en GitHub que te
+              permite definir flujos de trabajo automáticos mediante archivos
+              YAML. Estos flujos pueden ejecutarse cuando se hace push, se abre
+              un pull request, o incluso a horarios definidos.
+            </p>
+
+            <blockquote>
+              "Automatizar tareas repetitivas te permite enfocarte en lo
+              importante: escribir código de calidad."
+            </blockquote>
+
+            <h2>Beneficios de Usar CI/CD</h2>
+            <ul>
+              <li>Detección temprana de errores con tests automatizados</li>
+              <li>Despliegue más rápido y seguro</li>
+              <li>Menos pasos manuales = menos errores humanos</li>
+              <li>Mayor confianza en cada commit y pull request</li>
+            </ul>
+
+            <h2>Primer Workflow Básico</h2>
+            <p>
+              Podés crear un archivo
+              <code>.github/workflows/deploy.yml</code> con una acción simple
+              que corra tus tests:
+            </p>
+
+            <pre><code class="language-yaml">
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v3
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Correr tests
+      run: npm test
+    </code></pre>
+
+            <h2>Desplegar Automáticamente</h2>
+            <p>
+              Si tu aplicación está en Vercel, Firebase, Netlify o incluso un
+              VPS, podés agregar pasos para desplegar al hacer merge o push:
+            </p>
+
+            <ul>
+              <li>
+                Accedé a tus tokens de autenticación a través de
+                <strong>GitHub Secrets</strong>
+              </li>
+              <li>
+                Agregá pasos para construir el proyecto (ej:
+                <code>npm run build</code>)
+              </li>
+              <li>
+                Usá acciones oficiales como <code>Firebase Action</code> o
+                <code>scp</code> para despliegue manual
+              </li>
+            </ul>
+
+            <h2>Otras Automatizaciones Útiles</h2>
+            <ul>
+              <li>Linting automático con ESLint</li>
+              <li>Generación de documentación</li>
+              <li>Etiquetado de versiones (semver)</li>
+              <li>Alertas por email o Slack si algo falla</li>
+            </ul>
+
+            <h2>Consejos para Escalar tu Workflow</h2>
+            <p>
+              A medida que tu equipo crece, tus workflows también. Dividí en
+              jobs paralelos, cacheá dependencias, y reusá plantillas (`reusable
+              workflows`) para mantener todo organizado.
+            </p>
+
+            <h2>Conclusión</h2>
+            <p>
+              GitHub Actions es una de las formas más simples y poderosas de
+              implementar CI/CD en tus proyectos. Automatizá hoy y liberá tiempo
+              para enfocarte en lo que realmente importa.
+            </p>
+
+            <p>
+              Empezá con flujos básicos, y poco a poco convertí tu proceso de
+              desarrollo en una máquina eficiente, segura y moderna.
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="pie-pagina">
+      <div class="contenedor">
+        <div class="contenido-pie">
+          <div class="seccion-pie">
+            <h3>BlogTec</h3>
+            <p>
+              Tu fuente confiable de información sobre tecnología y desarrollo.
+            </p>
+          </div>
+          <div class="seccion-pie">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+              <li><a href="index.html" class="enlace-nav">Inicio</a></li>
+              <li>
+                <a href="index.html#suscribirse" class="enlace-nav"
+                  >Suscribirse</a
+                >
+              </li>
+              <li><a href="#" class="enlace-nav">Volver a Linktree</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pie-inferior">
+          <p>&copy; 2025 BlogTec. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

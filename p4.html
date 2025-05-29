@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Futuro de la Inteligencia Artificial en 2024 - TechBlog</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <nav class="navegacion">
+        <div class="contenedor-nav">
+          <a href="index.html" class="logo-nav">BldogTec</a>
+          <ul class="menu-nav" id="menuNav">
+            <li><a href="index.html" class="enlace-nav activo">Inicio</a></li>
+            <li>
+              <a href="index.html#suscribirse" class="enlace-nav"
+                >Suscribirse</a
+              >
+            </li>
+            <li><a href="#" class="enlace-nav">Volver a Linktree</a></li>
+            <link rel="icon" href="./img/virtual.ico" type="image/x-icon" />
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="principal">
+      <article class="detalle-blog">
+        <div class="contenedor">
+          <div class="migas">
+            <a href="index.html">Inicio</a> /
+            <span>Seguridad en APIs REST y GraphQL</span>
+          </div>
+
+          <header class="cabecera-blog">
+            <span class="categoria-blog">Ciberseguridad</span>
+            <h1 class="titulo-blog">
+              Cómo Proteger tus APIs REST y GraphQL en 2025
+            </h1>
+          </header>
+
+          <div class="contenedor-imagen-blog">
+            <img
+              src="./img/img4.png"
+              alt="Seguridad en APIs"
+              class="imagen-destacada-blog"
+            />
+          </div>
+
+          <div class="contenido-blog">
+            <p class="introduccion">
+              En un mundo cada vez más conectado, las APIs son el corazón de la
+              comunicación entre sistemas. Pero con esta exposición también
+              vienen riesgos. En este artículo te mostramos cómo proteger
+              eficazmente tus APIs REST y GraphQL frente a amenazas modernas.
+            </p>
+
+            <h2>1. Autenticación y Autorización: Nunca Asumir</h2>
+            <p>
+              Usar autenticación robusta es clave. Para REST, lo más común sigue
+              siendo <strong>OAuth 2.0</strong> y <strong>JWT</strong>. En
+              GraphQL, cada consulta puede acceder a distintos recursos, por lo
+              que es vital validar los permisos en cada operación.
+            </p>
+
+            <ul>
+              <li>
+                Implementá autenticación con tokens seguros (ej. JWT con
+                expiración corta).
+              </li>
+              <li>Verificá los scopes o roles en cada endpoint o resolver.</li>
+              <li>
+                En GraphQL, aplicá <code>authMiddleware</code> o validaciones
+                por campo.
+              </li>
+            </ul>
+
+            <h2>2. Validación de Entradas y Filtrado</h2>
+            <p>
+              Nunca confíes en los datos que recibís del cliente. La validación
+              estricta evita inyecciones de código, errores de lógica y ataques
+              de denegación de servicio.
+            </p>
+
+            <ul>
+              <li>
+                Usá librerías como <code>Joi</code>, <code>zod</code> o
+                <code>Yup</code> para validar entradas.
+              </li>
+              <li>
+                En GraphQL, definí esquemas con tipos obligatorios y límites
+                claros.
+              </li>
+              <li>
+                Filtrá campos sensibles que no deberían estar disponibles desde
+                la API.
+              </li>
+            </ul>
+
+            <h2>3. Rate Limiting y Protección contra Abuso</h2>
+            <p>
+              Prevení abusos como ataques de fuerza bruta o sobrecarga de
+              peticiones con técnicas de rate limiting. Esto es especialmente
+              crítico en GraphQL, donde una sola consulta puede ser muy costosa.
+            </p>
+
+            <blockquote>
+              "Una API lenta no solo es molesta, es un vector de ataque en
+              potencia."
+            </blockquote>
+
+            <ul>
+              <li>
+                Usá herramientas como <code>express-rate-limit</code> o
+                <code>graphql-depth-limit</code>.
+              </li>
+              <li>Limitá la cantidad de peticiones por IP, usuario o token.</li>
+              <li>
+                Bloqueá patrones de consulta anidados excesivamente profundos.
+              </li>
+            </ul>
+
+            <h2>4. CORS, HTTPS y Cabeceras Seguras</h2>
+            <p>
+              Asegurate de que tu API solo pueda ser accedida desde orígenes
+              confiables. Configurá correctamente los headers HTTP y usá HTTPS
+              siempre.
+            </p>
+
+            <ul>
+              <li>
+                Configurá políticas CORS específicas, no uses <code>*</code> en
+                producción.
+              </li>
+              <li>
+                Activá cabeceras como <code>Strict-Transport-Security</code>,
+                <code>X-Content-Type-Options</code> y
+                <code>Content-Security-Policy</code>.
+              </li>
+              <li>Forzá redirección a HTTPS desde el servidor.</li>
+            </ul>
+
+            <h2>5. Registro, Monitoreo y Alertas</h2>
+            <p>
+              Proteger tu API también significa saber qué está pasando. Un
+              sistema de logging y alertas bien configurado puede detectar
+              anomalías antes de que sea tarde.
+            </p>
+
+            <ul>
+              <li>Registrá cada acceso, error y comportamiento sospechoso.</li>
+              <li>
+                Implementá alertas por intentos fallidos de acceso, picos de
+                tráfico o errores repetitivos.
+              </li>
+              <li>
+                Integrá herramientas como Sentry, Datadog o Prometheus +
+                Grafana.
+              </li>
+            </ul>
+
+            <h2>6. Seguridad Específica para GraphQL</h2>
+            <p>
+              GraphQL tiene ventajas pero también nuevos desafíos. Debés limitar
+              la complejidad de las consultas y el acceso a datos innecesarios.
+            </p>
+
+            <ul>
+              <li>
+                Limitá profundidad máxima de queries (<code>depth limit</code>).
+              </li>
+              <li>Activá análisis de coste de queries para evitar abusos.</li>
+              <li>Desactivá introspección en producción si no es necesaria.</li>
+            </ul>
+
+            <h2>Conclusión</h2>
+            <p>
+              En 2025, la seguridad de APIs no es opcional. REST y GraphQL deben
+              ser diseñadas con protección en mente desde el principio. Con
+              buenas prácticas, herramientas modernas y monitoreo constante,
+              podés ofrecer servicios rápidos y seguros.
+            </p>
+
+            <p>
+              Recordá: una API segura no solo protege tus datos, también protege
+              la confianza de tus usuarios.
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="pie-pagina">
+      <div class="contenedor">
+        <div class="contenido-pie">
+          <div class="seccion-pie">
+            <h3>BlogTec</h3>
+            <p>
+              Tu fuente confiable de información sobre tecnología y desarrollo.
+            </p>
+          </div>
+          <div class="seccion-pie">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+              <li><a href="index.html" class="enlace-nav">Inicio</a></li>
+              <li>
+                <a href="index.html#suscribirse" class="enlace-nav"
+                  >Suscribirse</a
+                >
+              </li>
+              <li><a href="#" class="enlace-nav">Volver a Linktree</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pie-inferior">
+          <p>&copy; 2025 BlogTec. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

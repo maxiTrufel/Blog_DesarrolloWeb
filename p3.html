@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Futuro de la Inteligencia Artificial en 2024 - TechBlog</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="icon" href="./img/virtual.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <nav class="navegacion">
+        <div class="contenedor-nav">
+          <a href="index.html" class="logo-nav">BldogTec</a>
+          <ul class="menu-nav" id="menuNav">
+            <li><a href="index.html" class="enlace-nav activo">Inicio</a></li>
+            <li>
+              <a href="index.html#suscribirse" class="enlace-nav"
+                >Suscribirse</a
+              >
+            </li>
+            <li><a href="#" class="enlace-nav">Volver a Linktree</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="principal">
+      <article class="detalle-blog">
+        <div class="contenedor">
+          <div class="migas">
+            <a href="index.html">Inicio</a> /
+            <span>React Server Components</span>
+          </div>
+
+          <header class="cabecera-blog">
+            <span class="categoria-blog">JavaScript</span>
+            <h1 class="titulo-blog">
+              React Server Components: Qué Son y Cuándo Usarlos
+            </h1>
+          </header>
+
+          <div class="contenedor-imagen-blog">
+            <img
+              src="./img/img3.png"
+              alt="React Server Components"
+              class="imagen-destacada-blog"
+            />
+          </div>
+
+          <div class="contenido-blog">
+            <p class="introduccion">
+              React sigue evolucionando y una de las incorporaciones más
+              disruptivas en los últimos años son los
+              <strong>React Server Components</strong> (RSC). En este artículo
+              te explicamos qué son, cómo funcionan y cuándo conviene usarlos.
+            </p>
+
+            <h2>¿Qué son los React Server Components?</h2>
+            <p>
+              Los React Server Components permiten renderizar componentes
+              directamente en el servidor, sin incluir su lógica en el
+              JavaScript que se envía al cliente. Esto significa que el
+              componente se procesa en el backend y el resultado HTML se entrega
+              al navegador.
+            </p>
+
+            <blockquote>
+              "Con RSC, el cliente recibe solo lo que necesita ver. Nada más,
+              nada menos."
+            </blockquote>
+
+            <h3>Diferencias clave con los componentes tradicionales</h3>
+            <ul>
+              <li>
+                No tienen efectos secundarios (no usan <code>useEffect</code>).
+              </li>
+              <li>
+                No manejan estado en el cliente (<code>useState</code> no es
+                válido).
+              </li>
+              <li>
+                Permiten acceder a recursos del servidor directamente (como base
+                de datos o APIs internas).
+              </li>
+              <li>No aumentan el tamaño del bundle en el navegador.</li>
+            </ul>
+
+            <h2>Ventajas de usar RSC</h2>
+            <p>
+              Al renderizar componentes en el servidor, obtenés mejores tiempos
+              de carga, menos JavaScript en el cliente, y un rendimiento
+              superior, especialmente en apps grandes o con mucha lógica de
+              datos.
+            </p>
+
+            <h3>Casos de uso ideales</h3>
+            <ul>
+              <li>
+                Listados de productos o contenido estático que cambia con poca
+                frecuencia.
+              </li>
+              <li>Tablas, dashboards y gráficas con muchos datos.</li>
+              <li>
+                Autenticación y renderizado condicional según permisos de
+                usuario.
+              </li>
+              <li>
+                Renderizado de contenido basado en consultas a base de datos.
+              </li>
+            </ul>
+
+            <h2>¿Cómo se usan?</h2>
+            <p>
+              Los RSC están disponibles en Next.js usando el
+              <code>App Router</code> (no el tradicional
+              <code>Pages Router</code>). Simplemente creás un componente con la
+              extensión <code>.server.js</code> o marcás la función como
+              <code>async</code> y la exportás desde un archivo del servidor.
+            </p>
+
+            <pre><code class="language-js">
+// ejemplo.server.js
+export default async function ProductosDestacados() {
+  const productos = await obtenerProductosDesdeDB();
+  return (
+    &lt;ul&gt;
+      {productos.map(p =&gt; &lt;li key={p.id}&gt;{p.nombre}&lt;/li&gt;)}
+    &lt;/ul&gt;
+  );
+}
+    </code></pre>
+
+            <h2>¿Cuándo evitar RSC?</h2>
+            <p>
+              Si tu componente depende de interacciones del usuario en tiempo
+              real, como formularios dinámicos o animaciones, lo mejor es usar
+              componentes cliente. También evitá RSC si necesitás hooks como
+              <code>useEffect</code> o <code>useState</code>.
+            </p>
+
+            <h2>Conclusión</h2>
+            <p>
+              React Server Components marcan una nueva era para React y el
+              desarrollo web moderno. Son ideales para apps donde el rendimiento
+              y la eficiencia del bundle son críticos.
+            </p>
+
+            <p>
+              Aprender a combinar RSC con componentes cliente será clave para
+              desarrollar aplicaciones escalables y rápidas en 2025. ¿Ya
+              empezaste a usarlos?
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="pie-pagina">
+      <div class="contenedor">
+        <div class="contenido-pie">
+          <div class="seccion-pie">
+            <h3>BlogTec</h3>
+            <p>
+              Tu fuente confiable de información sobre tecnología y desarrollo.
+            </p>
+          </div>
+          <div class="seccion-pie">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+              <li><a href="index.html" class="enlace-nav">Inicio</a></li>
+              <li>
+                <a href="index.html#suscribirse" class="enlace-nav"
+                  >Suscribirse</a
+                >
+              </li>
+              <li><a href="#" class="enlace-nav">Volver a Linktree</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pie-inferior">
+          <p>&copy; 2025 BlogTec. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
