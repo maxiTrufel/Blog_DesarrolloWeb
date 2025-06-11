@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlogTec - Blog de Tecnología</title>
+  <link rel="icon" href="./img/virtual.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+  <header class="cabecera">
+    <nav class="navegacion">
+      <div class="contenedor-nav">
+        <a href="index.html" class="logo-nav">BlogTec</a>
+        <ul class="menu-nav" id="menuNav">
+          <li><a href="index.html" class="enlace-nav activo">Inicio</a></li>
+          <li><a href="index.html#suscribirse" class="enlace-nav">Suscribirse</a></li>
+                      <li><a href="contacto.html" class="enlace-nav">Contacto</a></li>
+          <li><a href="https://maxitrufel.github.io/Linktree_DesarrolloWeb/" class="enlace-nav">Volver a Linktree</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="principal">
+    <main class="principal">
+      <section class="cabecera-pagina">
+        <div class="contenedor">
+          <h1 class="titulo-pagina">Contacto</h1>
+          <p class="descripcion-pagina">¿Tienes alguna pregunta o sugerencia?</p>
+        </div>
+      </section>
+
+      <section class="seccion-contacto">
+        <div class="contenedor contenedor-contacto">
+          <div class="formulario-contacto">
+            <h2>Envíanos un mensaje</h2>
+            <form id="contactForm">
+              <div class="grupo-formulario">
+                <label for="nombre">Nombre completo <span class="requerido">*</span></label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="email">Correo electrónico <span class="requerido">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono (opcional)">
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="asunto">Asunto <span class="requerido">*</span></label>
+                <input type="text" id="asunto" name="asunto" required placeholder="Asunto de tu mensaje">
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="mensaje">Mensaje <span class="requerido">*</span></label>
+                <textarea id="mensaje" name="mensaje" rows="6" required
+                  placeholder="Escribe tu mensaje aquí..."></textarea>
+              </div>
+
+              <button type="submit" class="boton-enviar">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+      <div class="contenedor">
+        <div class="contenido-pie">
+          <div class="seccion-pie">
+            <h3>BlogTec</h3>
+            <p>
+              Tu fuente confiable de información sobre tecnología y desarrollo.
+            </p>
+          </div>
+          <div class="seccion-pie">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+              <li><a href="index.html" class="enlace-nav">Inicio</a></li>
+              <li><a href="index.html#suscribirse" class="enlace-nav">Suscribirse</a></li>
+                          <li><a href="contacto.html" class="enlace-nav">Contacto</a></li>
+
+              <li><a href="https://maxitrufel.github.io/Linktree_DesarrolloWeb/" class="enlace-nav">Volver a
+                  Linktree</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pie-inferior">
+          <p>&copy; 2025 BlogTec. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>
