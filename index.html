@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlogTec - Blog de Tecnología</title>
-      <link rel="icon" href="./img/virtual.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/virtual.ico" type="image/x-icon" />
     <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
@@ -14,9 +14,19 @@
           <a href="index.html" class="logo-nav">BlogTec</a>
           <ul class="menu-nav" id="menuNav">
             <li><a href="index.html" class="enlace-nav activo">Inicio</a></li>
-            <li><a href="index.html#suscribirse" class="enlace-nav">Suscribirse</a></li>
+            <li>
+              <a href="index.html#suscribirse" class="enlace-nav"
+                >Suscribirse</a
+              >
+            </li>
             <li><a href="contacto.html" class="enlace-nav">Contacto</a></li>
-            <li><a href="https://maxitrufel.github.io/Linktree_DesarrolloWeb/" class="enlace-nav">Volver a Linktree</a></li>
+            <li>
+              <a
+                href="https://maxitrufel.github.io/Linktree_DesarrolloWeb/"
+                class="enlace-nav"
+                >Volver a Linktree</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
@@ -39,7 +49,11 @@
           <div class="cuadricula-blog">
             <article class="tarjeta-blog destacado">
               <div class="imagen-blog">
-                <img class="altura-max" src="./img/img1.png" alt="AI Generativa" />
+                <img
+                  class="altura-max"
+                  src="./img/img1.png"
+                  alt="AI Generativa"
+                />
               </div>
               <div class="contenido-blog">
                 <span class="categoria-blog">Inteligencia Artificial</span>
@@ -180,11 +194,17 @@
 
           <div class="widget">
             <h3 class="titulo-widget" id="suscribirse">Suscríbete</h3>
-            <div class="formulario-suscripcion">
+            <form id="formulario-suscripcion" class="formulario-suscripcion">
               <p>Recibe las últimas actualizaciones en tu correo</p>
-              <input type="email" placeholder="Tu correo electrónico" />
-              <button class="boton-sus">Suscribirse</button>
-            </div>
+              <input
+                type="email"
+                id="email-suscripcion"
+                name="email"
+                required
+                placeholder="Tu correo electrónico"
+              />
+              <button type="submit" class="boton-sus">Suscribirse</button>
+            </form>
           </div>
         </aside>
       </div>
@@ -202,10 +222,20 @@
           <div class="seccion-pie">
             <h4>Enlaces Rápidos</h4>
             <ul>
-            <li><a href="index.html" class="enlace-nav">Inicio</a></li>
-            <li><a href="index.html#suscribirse" class="enlace-nav">Suscribirse</a></li>
-            <li><a href="contacto.html" class="enlace-nav">Contacto</a></li>
-            <li><a href="https://maxitrufel.github.io/Linktree_DesarrolloWeb/" class="enlace-nav">Volver a Linktree</a></li>
+              <li><a href="index.html" class="enlace-nav">Inicio</a></li>
+              <li>
+                <a href="index.html#suscribirse" class="enlace-nav"
+                  >Suscribirse</a
+                >
+              </li>
+              <li><a href="contacto.html" class="enlace-nav">Contacto</a></li>
+              <li>
+                <a
+                  href="https://maxitrufel.github.io/Linktree_DesarrolloWeb/"
+                  class="enlace-nav"
+                  >Volver a Linktree</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -215,4 +245,5 @@
       </div>
     </footer>
   </body>
+  <script src="./suscribirse.js"></script>
 </html>
